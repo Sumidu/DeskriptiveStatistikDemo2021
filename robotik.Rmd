@@ -1,0 +1,36 @@
+---
+title: "Robotik in der Pflege"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(remotes)
+library(dataforsocialscience)
+library(tidyverse)
+
+```
+
+# Unsere Analyse
+
+Gruppe 1 macht Robo_bed + Human_bed
+Ignoriert werden "care_pref_robo", "care_pref_human".
+Alle machen Age, Gender, CSE
+
+```{r}
+names(robo_care)
+```
+
+
+
+```{r}
+
+mean(robo_care$age)
+sd(robo_care$age)
+
+qplot(robo_care$age)
+
+table(robo_care$gender)
+```
+
